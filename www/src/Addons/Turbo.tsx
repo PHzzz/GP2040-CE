@@ -15,6 +15,11 @@ const SHMUP_MIXED_MODES = [
 	{ label: 'Charge Priority', value: 1 },
 ];
 
+const TURBO_LED_STATES = [
+	{ label: 'Active low', value: 0 },
+	{ label: 'Active high', value: 1 },
+];
+
 const TURBO_MASKS = [
 	{ label: 'None', value: 0 },
 	{ label: 'B1', value: 1 << 0 },
@@ -99,6 +104,10 @@ export const turboScheme = {
 		.number()
 		.label('Charge Shot Button 4 Map')
 		.validateSelectionWhenValue('TurboInputEnabled', BUTTON_MASKS),
+	turboLEDActiveState: yup
+		.number()
+		.label('Turbo LED mode')
+		.validateSelectionWhenValue('TurboInputEnabled', DUAL_STICK_MODES),
 };
 
 export const turboState = {
@@ -120,6 +129,7 @@ export const turboState = {
 	TurboInputEnabled: 0,
 	turboPinLED: -1,
 	turboShotCount: 5,
+	turboLEDActiveState: 1,
 };
 
 const Turbo = ({ values, errors, handleChange, handleCheckbox }) => {
@@ -165,6 +175,25 @@ const Turbo = ({ values, errors, handleChange, handleCheckbox }) => {
 						onChange={handleChange}
 					>
 						<AnalogPinOptions />
+					</FormSelect>
+					<FormSelect
+							label={t('AddonsConfig:turbo-led-state-on-label')}
+							name="turboLEDActiveState"
+							className="form-select-sm"
+							groupClassName="col-sm-3 mb-3"
+							value={values.turboLEDActiveState}
+							error={errors.turboLEDActiveState}
+							isInvalid={errors.turboLEDActiveState}
+							onChange={handleChange}
+						>
+							{TURBO_LED_STATES.map((o, i) => (
+								<option
+									key={`button-turboLEDActiveState-option-${i}`}
+									value={o.value}
+								>
+									{o.label}
+								</option>
+							))}
 					</FormSelect>
 					<FormCheck
 						label={t('AddonsConfig:turbo-shmup-mode-label')}

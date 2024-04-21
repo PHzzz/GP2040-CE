@@ -22,6 +22,11 @@
 #define TURBO_LED_PIN -1
 #endif
 
+// TURBO LED ACTIVE STATE
+#ifndef TURBO_LED_ACTIVE_HIGH
+#define TURBO_LED_ACTIVE_HIGH 1
+#endif
+
 // TURBO SHMUP MODE
 #ifndef TURBO_SHMUP_MODE
 #define TURBO_SHMUP_MODE 0
@@ -120,5 +125,6 @@ private:
     uint16_t shmupBtnMask[4];   // Turbo SHMUP Non-Turbo Button Masks
     uint16_t lastButtons;       // Last buttons (for Turbo Reset on Release)
     bool hasLedPin;             // Flag for LED pin presence
+    bool bTurboLedStateOn;      // GPIO pin state for turbo LED on
 };
 #endif  // TURBO_H_

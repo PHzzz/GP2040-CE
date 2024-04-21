@@ -447,6 +447,7 @@ app.get('/api/getAddonsOptions', (req, res) => {
 		shmupBtnMask2: 0,
 		shmupBtnMask3: 0,
 		shmupBtnMask4: 0,
+		turboLEDActiveState: 1,
 		pinShmupDial: -1,
 		sliderSOCDModeDefault: 1,
 		wiiExtensionBlock: 0,

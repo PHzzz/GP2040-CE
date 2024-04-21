@@ -1342,6 +1342,7 @@ std::string setAddonOptions()
     docToValue(turboOptions.shmupBtnMask3, doc, "shmupBtnMask3");
     docToValue(turboOptions.shmupBtnMask4, doc, "shmupBtnMask4");
     docToPin(turboOptions.shmupDialPin, doc, "pinShmupDial");
+    docToValue(turboOptions.ledActiveState, doc, "turboLEDActiveState");
     docToValue(turboOptions.enabled, doc, "TurboInputEnabled");
 
     WiiOptions& wiiOptions = Storage::getInstance().getAddonOptions().wiiOptions;
@@ -1746,6 +1747,7 @@ std::string getAddonOptions()
     writeDoc(doc, "shmupBtnMask3", turboOptions.shmupBtnMask3);
     writeDoc(doc, "shmupBtnMask4", turboOptions.shmupBtnMask4);
     writeDoc(doc, "pinShmupDial", cleanPin(turboOptions.shmupDialPin));
+    writeDoc(doc, "turboLEDActiveState", turboOptions.ledActiveState);
     writeDoc(doc, "TurboInputEnabled", turboOptions.enabled);
 
     const WiiOptions& wiiOptions = Storage::getInstance().getAddonOptions().wiiOptions;

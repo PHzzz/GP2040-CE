@@ -27,6 +27,7 @@ export default {
 	'turbo-header-text': 'Turbo',
 	'turbo-button-pin-label': 'Turbo Pin',
 	'turbo-led-pin-label': 'Turbo Pin LED',
+	'turbo-led-state-on-label': 'Turbo LED mode',
 	'turbo-shmup-dial-pin-label': 'Turbo Dial (ADC ONLY)',
 	'turbo-shot-count-label': 'Turbo Shot Count',
 	'turbo-shmup-mode-label': 'SHMUP MODE',
