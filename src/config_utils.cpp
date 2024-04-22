@@ -549,7 +549,7 @@ void ConfigUtils::initUnsetPropertiesWithDefaults(Config& config)
     INIT_UNSET_PROPERTY(config.addonOptions.turboOptions, shmupBtnMask3, SHMUP_BUTTON3);
     INIT_UNSET_PROPERTY(config.addonOptions.turboOptions, shmupBtnMask4, SHMUP_BUTTON4);
     INIT_UNSET_PROPERTY(config.addonOptions.turboOptions, shmupMixMode, SHMUP_MIX_MODE);
-    INIT_UNSET_PROPERTY(config.addonOptions.turboOptions, ledActiveState, TURBO_LED_ACTIVE_HIGH);
+    INIT_UNSET_PROPERTY(config.addonOptions.turboOptions, ledActiveState, !!TURBO_LED_ACTIVE_HIGH);
 
     // addonOptions.sliderOptions
     INIT_UNSET_PROPERTY(config.addonOptions.sliderOptions, enabled, !!JSLIDER_ENABLED);
