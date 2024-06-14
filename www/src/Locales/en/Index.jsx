@@ -14,7 +14,9 @@ import AddonsConfig from './AddonsConfig';
 import CaptureButton from './CaptureButton';
 import WiiAddon from './Addons/WiiAddon';
 import Rotary from './Addons/Rotary';
+import PCF8575 from './Addons/PCF8575';
 import InputMacroAddon from './InputMacroAddon';
+import LayoutConfig from './LayoutConfig';
 
 export default {
 	Common,
@@ -32,6 +34,8 @@ export default {
 	AddonsConfig,
 	CaptureButton,
 	WiiAddon,
-    Rotary,
+	Rotary,
 	InputMacroAddon,
+	LayoutConfig,
+	PCF8575,
 };
